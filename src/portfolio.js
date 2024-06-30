@@ -1,13 +1,13 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
-  homepage: 'https://rjshkhr.github.io/cleanfolio',
-  title: 'JS.',
+  homepage: 'https://vedantbothikar.github.io',
+  title: '',
 }
 
 const about = {
   // all the properties are optional - can be left empty or deleted
-  name: 'John Smith',
-  role: 'Front End Engineer',
+  name: 'Vedant Bothikar',
+  role: 'Software Engineer',
   description:
     'Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.',
   resume: 'https://example.com',
@@ -65,7 +65,7 @@ const skills = [
 
 const contact = {
   // email is optional - if left empty Contact section won't show up
-  email: 'johnsmith@mail.com',
+  email: 'vbothikar2001@gmail.com',
 }
 
 export { header, about, projects, skills, contact }
