@@ -1,71 +1,54 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
-  homepage: 'https://vedantbothikar.github.io',
+  homepage: 'https://atharvayeola.github.io',
   title: '',
 }
 
 const about = {
   // all the properties are optional - can be left empty or deleted
-  name: 'Vedant Bothikar',
-  role: 'Software Engineer',
+  name: 'Atharva Yeola',
+  role: 'Machine Learning Engineer',
   description:
-    'Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.',
-  resume: 'https://example.com',
+    'A software engineer with expertise in machine learning, computer vision and LLMs. Prof. Bintu (his PI @UCSD) quotes "Atharva is proficient in Python and PyTorch, with experience in writing advanced machine learning algorithms and designing data processing pipelines." His manager @Rhythmflows Solutions Pvt. Ltd says - "Atharva has demonstrated success in understanding business needs, managing complex projects, and enhancing model performance with cutting-edge techniques." Mr Mokashi (Director @Atomic Loops) mentions: "Atharva has proven ability to lead teams and collaborate effectively in high-impact projects."',
+  resume: 'https://drive.google.com/file/d/1e7CcXW5GO7712bNG8PPjHLff_fb1wP_g/view?usp=sharing',
   social: {
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
+    linkedin: 'https://linkedin.com/in/atharvayeola',
+    github: 'https://github.com/atharvayeola',
   },
 }
 
 const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
+
   {
-    name: 'Project 1',
+    name: 'End2End Text Summarizer',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'Built a text summarizer for concise summaries, managing the entire workflow from configuration to deployment. Automated CI/CD with AWS and GitHub Actions, handling Docker, EC2, ECR, and runner setup.',
+    stack: ['Transformers, NLP, GitHub Actions'],
+    sourceCode: 'https://github.com/atharvayeola/text-summarizer',
+    livePreview: 'https://github.com/atharvayeola/text-summarizer',
   },
   {
-    name: 'Project 2',
+    name: 'Retail Vision Enhancement',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'Implemented YOLOv8 for object detection, achieving over 90% accuracy in labeling on-shelf retail products. Utilized SuperGlue for precise product identification, ensuring accurate differentiation between similar items. Additionally, a Dockerfile was created to guarantee cross-platform reproducibility, simplifying deployment and setup.',
+    stack: ['yoloV8', 'SuperGlue', 'Docker'],
+    sourceCode: 'https://github.com/atharvayeola/retail-vision-enhancement',
+    livePreview: 'https://github.com/atharvayeola/retail-vision-enhancement/blob/main/results/bounding_box_detection.jpg',
   },
-  {
-    name: 'Project 3',
-    description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
-  },
+ 
 ]
 
 const skills = [
   // skills can be added or removed
   // if there are no skills, Skills section won't show up
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'Redux',
-  'SASS',
-  'Material UI',
-  'Git',
-  'CI/CD',
-  'Jest',
-  'Enzyme',
+  'Python', 'Computer Vision', 'LLMs', 'SQL', 'Pytorch', 'TensorFlow', 'PySpark', 'AWS', 'Docker'
 ]
 
 const contact = {
   // email is optional - if left empty Contact section won't show up
-  email: 'vbothikar2001@gmail.com',
+  email: 'atharvayeola12@gmail.com',
 }
 
 export { header, about, projects, skills, contact }
