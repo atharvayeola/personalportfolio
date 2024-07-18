@@ -10,7 +10,7 @@ const about = {
   role: 'Machine Learning Engineer',
   description:
     'A software engineer with expertise in machine learning, computer vision and LLMs. Prof. Bintu (his PI @UCSD) quotes "Atharva is proficient in Python and PyTorch, with experience in writing advanced machine learning algorithms and designing data processing pipelines." His manager @Rhythmflows Solutions Pvt. Ltd says - "Atharva has demonstrated success in understanding business needs, managing complex projects, and enhancing model performance with cutting-edge techniques." Mr Mokashi (Director @Atomic Loops) mentions: "Atharva has proven ability to lead teams and collaborate effectively in high-impact projects."',
-  resume: 'https://drive.google.com/file/d/1e7CcXW5GO7712bNG8PPjHLff_fb1wP_g/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/1BXn9N9QYH3TKhYGBGSnkKUMK2lr8ddqk/view?usp=sharing',
   social: {
     linkedin: 'https://linkedin.com/in/atharvayeola',
     github: 'https://github.com/atharvayeola',
