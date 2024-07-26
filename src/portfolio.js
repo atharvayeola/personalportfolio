@@ -14,6 +14,7 @@ const about = {
   social: {
     linkedin: 'https://linkedin.com/in/atharvayeola',
     github: 'https://github.com/atharvayeola',
+    medium: 'https://medium.com/@yeola-atharva',
   },
 }
 
