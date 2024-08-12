@@ -50,7 +50,13 @@ const skills = [
 const news = [
   {
     title: 'Paper Accepted at IEEE CVMI 2024 Conference',
-    description: `My paper titled <a href="https://cvmi2024.iiita.ac.in/AcceptedPapers.php" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">"A Deep Learning-based Study on Occluded Traffic Signs" (ID 552)</a> was accepted at the 3rd IEEE CVMI 2024 conference. The conference will be held on October 19-20, 2024, in Prayagraj, India. This paper elaborates on innovative approaches to interpreting traffic signs that are partially or fully occluded, a challenge in the field of computer vision.`,
+    description: {
+      text: 'My paper titled "A Deep Learning-based Study on Occluded Traffic Signs" (ID 552) was accepted at the 3rd IEEE CVMI 2024 conference. The conference will be held on October 19-20, 2024, in Prayagraj, India. This paper elaborates on innovative approaches to interpreting traffic signs that are partially or fully occluded, a challenge in the field of computer vision.',
+      link: {
+        url: 'https://cvmi2024.iiita.ac.in/AcceptedPapers.php',
+        text: 'A Deep Learning-based Study on Occluded Traffic Signs',
+      },
+    },
     date: 'August 1, 2024',
   },
 ]
