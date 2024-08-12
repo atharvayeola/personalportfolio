@@ -1,0 +1,23 @@
+.blogpost__list {
+    max-width: 450px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .blogpost__list-item {
+    margin: 0.5em;
+  }
+  
+  .blogpost__item-link {
+    color: #0066cc;
+    text-decoration: underline; /* This will underline the "Read More" link */
+    margin-bottom: 0.5em;
+  }
+  
+  .blogpost__item-link:hover {
+    text-decoration: underline; /* Keeps the underline on hover as well */
+  }
+  

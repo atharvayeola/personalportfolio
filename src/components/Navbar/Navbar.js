@@ -1,17 +1,17 @@
-import { useContext, useState } from 'react'
-import Brightness2Icon from '@material-ui/icons/Brightness2'
-import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
-import MenuIcon from '@material-ui/icons/Menu'
-import CloseIcon from '@material-ui/icons/Close'
-import { ThemeContext } from '../../contexts/theme'
-import { projects, skills, contact } from '../../portfolio'
-import './Navbar.css'
+import { useContext, useState } from 'react';
+import Brightness2Icon from '@material-ui/icons/Brightness2';
+import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
+import { ThemeContext } from '../../contexts/theme';
+import { projects, skills, contact } from '../../portfolio';
+import './Navbar.css';
 
 const Navbar = () => {
-  const [{ themeName, toggleTheme }] = useContext(ThemeContext)
-  const [showNavList, setShowNavList] = useState(false)
+  const [{ themeName, toggleTheme }] = useContext(ThemeContext);
+  const [showNavList, setShowNavList] = useState(false);
 
-  const toggleNavList = () => setShowNavList(!showNavList)
+  const toggleNavList = () => setShowNavList(!showNavList);
 
   return (
     <nav className='center nav'>
@@ -42,6 +42,26 @@ const Navbar = () => {
             </a>
           </li>
         ) : null}
+
+        <li className='nav__list-item nav__list-item--news'>
+          <a
+            href='#news'
+            onClick={toggleNavList}
+            className='link link--nav'
+          >
+            News
+          </a>
+        </li>
+
+        <li className='nav__list-item'>
+          <a
+            href='#blogpost'
+            onClick={toggleNavList}
+            className='link link--nav'
+          >
+            Blogpost
+          </a>
+        </li>
 
         {contact.email ? (
           <li className='nav__list-item'>
@@ -74,7 +94,7 @@ const Navbar = () => {
         {showNavList ? <CloseIcon /> : <MenuIcon />}
       </button>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

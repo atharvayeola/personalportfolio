@@ -13,6 +13,24 @@
 .nav__theme {
   margin-top: 0.4em;
 }
+/* Define a blinking animation */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Apply the blinking animation to the News button */
+.nav__list-item--news a {
+  animation: blink 1.5s infinite; /* Blinking every 1.5 seconds */
+  color: #ff4500; /* Optional: Change the color to make it more noticeable */
+}
+
+/* You can add a hover effect if you want it to stop blinking on hover */
+.nav__list-item--news a:hover {
+  animation: none; /* Stops blinking on hover */
+  color: #ff6347; /* Optional: Change color on hover */
+}
 
 @media (max-width: 600px) {
   .nav__list {
