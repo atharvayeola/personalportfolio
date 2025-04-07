@@ -21,6 +21,16 @@
   margin-top: 2.4em;
 }
 
+.about__desc a {
+  text-decoration: underline;
+  color: var(--clr-primary);
+}
+
+.about__desc a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
 .about .link--icon {
   margin-right: 0.8em;
 }
