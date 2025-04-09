@@ -1,9 +1,11 @@
 // import GitHubIcon from '@material-ui/icons/GitHub'
 // import LinkedInIcon from '@material-ui/icons/LinkedIn'
 
+import parse from 'html-react-parser';
 import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa'
 import { about } from '../../portfolio'
 import './About.css'
+
 
 const About = () => {
   const { name, role, description, resume, social } = about
@@ -20,7 +22,8 @@ const About = () => {
       {<ul className='about__desc'>
   {description &&
     description.map((point) => (
-      <li key={point} dangerouslySetInnerHTML={{ __html: point }} />
+      // <li key={point} dangerouslySetInnerHTML={{ __html: point }} />
+      <li key={point}>{parse(point)}</li>
     ))}
 </ul>
 /* <p className='about__desc'>{description && description}</p> */}

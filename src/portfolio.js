@@ -10,7 +10,8 @@ const about = {
   role: 'Data Scientist',
   description: [
     '→ A data scientist with expertise in analytics, decision science, machine learning, and LLMs.',
-    '→ <a href=https://www.johnwayers.com/" target="_blank" rel="noopener noreferrer">Dr. John Ayers</a> (his PI at <a href="https://ucsd.edu" target="_blank" rel="noopener noreferrer">UCSD</a>) quotes: "Atharva is a Masters student at UCSD but easily mistaken for a senior PhD fellow."',
+    '<a href=https://www.johnwayers.com/" target="_blank" rel="noopener noreferrer">Dr. John Ayers</a> (his PI at <a href="https://ucsd.edu" target="_blank" rel="noopener noreferrer">UCSD</a>) quotes:',
+    '→ "Atharva is a Masters student at UCSD but easily mistaken for a senior PhD fellow.',
     '→ He is a wonderful addition to our innovation ecosystem at <a href="https://qi.ucsd.edu/" target="_blank" rel="noopener noreferrer">Qualcomm Institute (QI)</a>, bridging science and practice!',
     '→ In less than a year, Atharva published a study in <a href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2830019" target="_blank" rel="noopener noreferrer">JAMA Internal Medicine</a> (4% acceptance rate), gaining significant media attention.',
     'His work has been featured in several prominent media outlets, including:',
