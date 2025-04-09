@@ -10,7 +10,7 @@ const about = {
   role: 'Data Scientist',
   description: [
     '→ A data scientist with expertise in analytics, decision science, machine learning, and LLMs.',
-    '→ <a href="https://www.johnwayers.com/" target="_blank" rel="noopener noreferrer">Dr. John Ayers</a> (his PI at <a href="https://ucsd.edu" target="_blank" rel="noopener noreferrer">UCSD</a>) quotes: "Atharva is a Masters student at UCSD but easily mistaken for a senior PhD fellow."',
+    '→ <a href=https://www.johnwayers.com/" target="_blank" rel="noopener noreferrer">Dr. John Ayers</a> (his PI at <a href="https://ucsd.edu" target="_blank" rel="noopener noreferrer">UCSD</a>) quotes: "Atharva is a Masters student at UCSD but easily mistaken for a senior PhD fellow."',
     '→ He is a wonderful addition to our innovation ecosystem at <a href="https://qi.ucsd.edu/" target="_blank" rel="noopener noreferrer">Qualcomm Institute (QI)</a>, bridging science and practice!',
     '→ In less than a year, Atharva published a study in <a href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2830019" target="_blank" rel="noopener noreferrer">JAMA Internal Medicine</a> (4% acceptance rate), gaining significant media attention.',
     'His work has been featured in several prominent media outlets, including:',
@@ -20,7 +20,7 @@ const about = {
     '<li><a href="https://www.nbcnews.com/health/health-news/online-searches-gambling-addiction-surge-legalized-sports-betting-expa-rcna192462" target="_blank" rel="noopener noreferrer">NBC News</a></li>',
     '<li><a href="https://www.npr.org/sections/shots-health-news/2025/02/18/nx-s1-5299943/as-sports-betting-has-soared-more-people-search-online-for-help-with-gambling-addiction" target="_blank" rel="noopener noreferrer">NPR</a></li>',
     '</ul>',
-    '→ <a href="https://hivtrends.org" target="_blank" rel="noopener noreferrer">HIVTrends.org</a>—a collaboration of <a href="https://cfar.ucsd.edu" target="_blank" rel="noopener noreferrer">CFAR</a>, <a href="https://www.jhu.edu/" target="_blank" rel="noopener noreferrer">JHU</a>, <a href="https://qi.ucsd.edu" target="_blank" rel="noopener noreferrer">QI</a>, and <a href="https://actri.ucsd.edu" target="_blank" rel="noopener noreferrer">ACTRI</a>—was made possible through his key contributions.'
+    '→ <a href="https://hivtrends.org" target="_blank" rel="noopener noreferrer">HIVTrends.org</a>—a collaboration of <a href="https://cfar.ucsd.edu" target="_blank" rel="noopener noreferrer">CFAR</a>, <a href="https://www.jhu.edu/" target="_blank" rel="noopener noreferrer">JHU</a>, <a href="https://qi.ucsd.edu" target="_blank" rel="noopener noreferrer">QI</a>, and <a href="https://actri.ucsd.edu" target="_blank" rel="noopener noreferrer">ACTRI</a>—was made possible through his key contributions."'
   ],  resume: '/resume.pdf',
   social: {
     linkedin: 'https://linkedin.com/in/atharvayeola',
