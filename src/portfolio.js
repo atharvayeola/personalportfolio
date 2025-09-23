@@ -7,7 +7,7 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Atharva Yeola',
-  role: 'Data Scientist',
+  role: 'Machine Learning Data Scientist',
   description: [
     '→ A data scientist with expertise in analytics, decision science, machine learning, and LLMs.',
     '<a href=https://www.johnwayers.com/" target="_blank" rel="noopener noreferrer">Dr. John Ayers</a> (his PI at <a href="https://ucsd.edu" target="_blank" rel="noopener noreferrer">UCSD</a>) quotes:',
@@ -22,7 +22,26 @@ const about = {
     '<li><a href="https://www.npr.org/sections/shots-health-news/2025/02/18/nx-s1-5299943/as-sports-betting-has-soared-more-people-search-online-for-help-with-gambling-addiction" target="_blank" rel="noopener noreferrer">NPR</a></li>',
     '</ul>',
     '→ <a href="https://hivtrends.org" target="_blank" rel="noopener noreferrer">HIVTrends.org</a>—a collaboration of <a href="https://cfar.ucsd.edu" target="_blank" rel="noopener noreferrer">CFAR</a>, <a href="https://www.jhu.edu/" target="_blank" rel="noopener noreferrer">JHU</a>, <a href="https://qi.ucsd.edu" target="_blank" rel="noopener noreferrer">QI</a>, and <a href="https://actri.ucsd.edu" target="_blank" rel="noopener noreferrer">ACTRI</a>—was made possible through his key contributions."'
-  ],  resume: '/resume.pdf',
+  ],
+  // Changed from single resume to multiple resumes
+  resumes: [
+    {
+      role: 'Data Scientist',
+      path: '/resume-data-scientist.pdf'
+    },
+    {
+      role: 'AI/ML and Applied Scientist',
+      path: '/resume-ml-scientist.pdf'
+    },
+    {
+      role: 'Data Engineer',
+      path: '/resume-data-engineer.pdf'
+    },
+    {
+      role: 'Data Analyst',
+      path: '/resume-data-analyst.pdf'
+    }
+  ],
   social: {
     linkedin: 'https://linkedin.com/in/atharvayeola',
     github: 'https://github.com/atharvayeola',

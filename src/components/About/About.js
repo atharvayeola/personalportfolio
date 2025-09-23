@@ -1,14 +1,21 @@
-// import GitHubIcon from '@material-ui/icons/GitHub'
-// import LinkedInIcon from '@material-ui/icons/LinkedIn'
-
+import { useState } from 'react';
 import parse from 'html-react-parser';
 import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa'
 import { about } from '../../portfolio'
 import './About.css'
 
-
 const About = () => {
-  const { name, role, description, resume, social } = about
+  const { name, role, description, resumes, social } = about
+  const [showResumeOptions, setShowResumeOptions] = useState(false)
+
+  const handleResumeClick = () => {
+    setShowResumeOptions(!showResumeOptions)
+  }
+
+  const handleResumeSelect = (resumePath) => {
+    window.open(resumePath, '_blank')
+    setShowResumeOptions(false)
+  }
 
   return (
     <div className='about center'>
@@ -19,22 +26,40 @@ const About = () => {
       )}
 
       {role && <h2 className='about__role'> {role}</h2>}
-      {<ul className='about__desc'>
-  {description &&
-    description.map((point) => (
-      // <li key={point} dangerouslySetInnerHTML={{ __html: point }} />
-      <li key={point}>{parse(point)}</li>
-    ))}
-</ul>
-/* <p className='about__desc'>{description && description}</p> */}
+      <ul className='about__desc'>
+        {description &&
+          description.map((point) => (
+            <li key={point}>{parse(point)}</li>
+          ))}
+      </ul>
 
       <div className='about__contact center'>
-        {resume && (
-          <a href={resume}>
-            <span type='button' className='btn btn--outline'>
+        {resumes && resumes.length > 0 && (
+          <div className='resume-container'>
+            <button 
+              type='button' 
+              className='btn btn--outline'
+              onClick={handleResumeClick}
+            >
               Resume
-            </span>
-          </a>
+            </button>
+            
+            {showResumeOptions && (
+              <div className='resume-dropdown'>
+                <p className='resume-dropdown__title'>What role are you hiring for?</p>
+                {resumes.map((resume) => (
+                  <button
+                    key={resume.role}
+                    type='button'
+                    className='resume-dropdown__item'
+                    onClick={() => handleResumeSelect(resume.path)}
+                  >
+                    {resume.role}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         )}
 
         {social && (
@@ -58,7 +83,7 @@ const About = () => {
                 <FaLinkedin />
               </a>
             )}
-            {social.medium && ( // Add Medium icon
+            {social.medium && (
               <a
                 href={social.medium}
                 aria-label='medium'
