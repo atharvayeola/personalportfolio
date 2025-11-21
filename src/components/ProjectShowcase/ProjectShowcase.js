@@ -37,7 +37,7 @@ const ProjectShowcase = ({ roleId }) => {
                         Download Resume
                     </button>
                     <p className='resume-hint'>
-                        💡 Tip: If PDF opens in dark mode, check your browser's appearance settings
+                        💡 Tip: If PDF opens in dark mode, check your browser&apos;s appearance settings
                     </p>
                 </div>
             </div>
