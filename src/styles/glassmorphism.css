@@ -1,0 +1,233 @@
+/* Glassmorphism Utility Classes */
+
+:root {
+    /* Glass effect variables */
+    --glass-bg-light: rgba(255, 255, 255, 0.7);
+    --glass-border-light: rgba(255, 255, 255, 0.3);
+    --glass-shadow-light: rgba(0, 0, 0, 0.1);
+
+    --glass-bg-dark: rgba(26, 26, 26, 0.7);
+    --glass-border-dark: rgba(255, 255, 255, 0.1);
+    --glass-shadow-dark: rgba(255, 255, 255, 0.05);
+
+    /* Glass effect variables only - no colored gradients */
+}
+
+/* Base glass card */
+.glass-card {
+    background: var(--glass-bg-light);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border-light);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 var(--glass-shadow-light);
+    transition: all 0.3s ease;
+}
+
+.dark .glass-card {
+    background: var(--glass-bg-dark);
+    border: 1px solid var(--glass-border-dark);
+    box-shadow: 0 8px 32px 0 var(--glass-shadow-dark);
+}
+
+/* Glass card hover effect */
+.glass-card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dark .glass-card-hover:hover {
+    box-shadow: 0 16px 48px 0 rgba(255, 255, 255, 0.1);
+}
+
+
+
+/* Floating animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Fade in animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.fade-in-delay-1 {
+    animation: fadeIn 0.6s ease-out 0.1s forwards;
+    opacity: 0;
+}
+
+.fade-in-delay-2 {
+    animation: fadeIn 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.fade-in-delay-3 {
+    animation: fadeIn 0.6s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Scale in animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+}
+
+/* Glow effect */
+.glow-on-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-on-hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.glow-on-hover:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Smooth transitions */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+
+/* Bento grid layouts */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.bento-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+@media (max-width: 768px) {
+    .bento-large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+/* Scroll reveal utility */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--clr-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr-primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-fg-alt);
+}
+
+/* Backdrop blur support check */
+@supports not (backdrop-filter: blur(10px)) {
+    .glass-card {
+        background: var(--clr-bg-alt);
+    }
+}

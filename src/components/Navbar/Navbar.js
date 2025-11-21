@@ -4,7 +4,7 @@ import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { ThemeContext } from '../../contexts/theme';
-import { projects, skills, contact } from '../../portfolio';
+import { allProjects, skills, contact } from '../../portfolio';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -19,11 +19,26 @@ const Navbar = () => {
         style={{ display: showNavList ? 'flex' : null }}
         className='nav__list'
       >
-        {projects.length ? (
+        {allProjects.length ? (
           <li className='nav__list-item'>
             <a
-              href='#projects'
-              onClick={toggleNavList}
+              href='#role-selector'
+              onClick={(e) => {
+                e.preventDefault();
+                toggleNavList();
+
+                // If we're on a role page, navigate back to home first
+                if (window.location.hash.startsWith('#role-')) {
+                  window.location.hash = '';
+                  // Wait for navigation, then scroll
+                  setTimeout(() => {
+                    document.getElementById('role-selector')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                } else {
+                  // Already on home page, just scroll
+                  document.getElementById('role-selector')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className='link link--nav'
             >
               Projects

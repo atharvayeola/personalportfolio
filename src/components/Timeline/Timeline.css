@@ -1,0 +1,138 @@
+.timeline {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline__subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--clr-fg);
+    margin-bottom: 3rem;
+    opacity: 0.8;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--clr-primary);
+    opacity: 0.2;
+}
+
+.timeline-item {
+    padding: 2rem;
+    padding-left: 3rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 2.5rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--clr-primary);
+    border: 3px solid var(--clr-bg);
+    box-shadow: 0 0 0 2px var(--clr-primary);
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 4px var(--clr-primary);
+}
+
+.timeline-item__date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--clr-primary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.timeline-item__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--clr-fg-alt);
+    margin-bottom: 1rem;
+}
+
+.timeline-item__description {
+    font-size: 1rem;
+    color: var(--clr-fg);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.timeline-item__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--clr-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.timeline-item__link:hover {
+    gap: 1rem;
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .timeline-item {
+        padding: 1.5rem;
+        padding-left: 2.5rem;
+    }
+
+    .timeline-item__title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline {
+        padding: 3rem 1rem;
+    }
+
+    .timeline-container::before {
+        left: 0.5rem;
+    }
+
+    .timeline-item {
+        padding: 1.5rem;
+        padding-left: 2rem;
+    }
+
+    .timeline-item::before {
+        left: 0.1rem;
+    }
+
+    .timeline-item:hover {
+        transform: translateX(5px);
+    }
+
+    .timeline__subtitle {
+        font-size: 1rem;
+    }
+}

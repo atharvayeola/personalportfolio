@@ -6,22 +6,22 @@
 }
 
 .light {
-  --clr-bg: #fcfcfc;
-  --clr-bg-alt: #fff;
-  --clr-fg: #555;
-  --clr-fg-alt: #444;
-  --clr-primary: #2978b5;
-  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --clr-bg: #ffffff;
+  --clr-bg-alt: #f8f8f8;
+  --clr-fg: #2a2a2a;
+  --clr-fg-alt: #1a1a1a;
+  --clr-primary: #1a1a1a;
+  --shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px;
 }
 
 .dark {
-  --clr-bg: #01020b;
-  --clr-bg-alt: #63646b;
-  --clr-fg: #ebebf1;
-  --clr-fg-alt: #b1b1bb;
-  --clr-primary: #dcdee5;
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --clr-bg: #0a0a0a;
+  --clr-bg-alt: #1a1a1a;
+  --clr-fg: #f5f5f5;
+  --clr-fg-alt: #ffffff;
+  --clr-primary: #ffffff;
+  --shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px 0px,
+    rgba(255, 255, 255, 0.05) 0px 2px 4px 0px;
 }
 
 main {
@@ -89,6 +89,7 @@ main {
   font-size: 0.9rem;
   text-transform: lowercase;
   transition: transform 0.2s ease-in-out;
+  border-radius: 8px;
 }
 
 .btn--outline {
@@ -124,7 +125,7 @@ main {
 .btn--plain {
   text-transform: initial;
   background-color: var(--clr-bg-alt);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  box-shadow: var(--shadow);
   border: 0;
 }
 

@@ -1,0 +1,126 @@
+.role-selector {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.role-selector__subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--clr-fg);
+    margin-bottom: 3rem;
+    opacity: 0.8;
+}
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.role-card {
+    padding: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.role-card:hover {
+    border-color: var(--clr-primary);
+    transform: translateY(-8px);
+}
+
+.role-card__icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
+}
+
+.role-card:hover .role-card__icon {
+    filter: grayscale(0%);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.role-card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-fg-alt);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.role-card:hover .role-card__title {
+    color: var(--clr-primary);
+}
+
+.role-card__description {
+    font-size: 1rem;
+    color: var(--clr-fg);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.role-card__cta {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--clr-primary);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.role-card:hover .role-card__cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Focus styles for accessibility */
+.role-card:focus {
+    outline: 2px solid var(--clr-primary);
+    outline-offset: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .role-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .role-card {
+        padding: 2rem;
+    }
+
+    .role-card__icon {
+        font-size: 3rem;
+    }
+
+    .role-card__title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .role-selector {
+        padding: 3rem 1rem;
+    }
+
+    .role-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .role-card {
+        padding: 1.5rem;
+    }
+
+    .role-selector__subtitle {
+        font-size: 1rem;
+    }
+}

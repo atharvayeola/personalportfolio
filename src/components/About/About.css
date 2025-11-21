@@ -51,7 +51,7 @@
   left: 0;
   background-color: var(--clr-bg-alt);
   box-shadow: var(--shadow);
-  border-radius: 5px;
+  border-radius: 12px;
   padding: 1em;
   min-width: 250px;
   z-index: 1000;
@@ -76,7 +76,7 @@
   color: var(--clr-primary);
   cursor: pointer;
   font-size: 0.85rem;
-  border-radius: 3px;
+  border-radius: 6px;
   transition: all 0.2s ease;
 }
 
@@ -94,7 +94,7 @@
     align-items: flex-start;
     margin-top: 2em;
   }
-  
+
   .resume-dropdown {
     min-width: 200px;
   }

@@ -1,29 +1,15 @@
 const header = {
-  // all the properties are optional - can be left empty or deleted
   homepage: 'https://atharvayeola.github.io',
   title: '',
 }
 
 const about = {
-  // all the properties are optional - can be left empty or deleted
   name: 'Atharva Yeola',
   role: 'Machine Learning Data Scientist',
   description: [
-    '→ A data scientist with expertise in analytics, decision science, machine learning, and LLMs.',
-    '<a href=https://www.johnwayers.com/" target="_blank" rel="noopener noreferrer">Dr. John Ayers</a> (his PI at <a href="https://ucsd.edu" target="_blank" rel="noopener noreferrer">UCSD</a>) quotes:',
-    '→ "Atharva is a Masters student at UCSD but easily mistaken for a senior PhD fellow.',
-    '→ He is a wonderful addition to our innovation ecosystem at <a href="https://qi.ucsd.edu/" target="_blank" rel="noopener noreferrer">Qualcomm Institute (QI)</a>, bridging science and practice!',
-    '→ In less than a year, Atharva published a study in <a href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2830019" target="_blank" rel="noopener noreferrer">JAMA Internal Medicine</a> (4% acceptance rate), gaining significant media attention.',
-    'His work has been featured in several prominent media outlets, including:',
-    '<ul>',
-    '<li><a href="https://nypost.com/2025/02/18/sports/gambling-addiction-soaring-since-legalization-of-sports-betting-in-most-us-states/" target="_blank" rel="noopener noreferrer">New York Post</a></li>',
-    '<li><a href="https://www.cbsnews.com/news/gambling-addiction-online-search-surge-sports-betting/" target="_blank" rel="noopener noreferrer">CBS News</a></li>',
-    '<li><a href="https://www.nbcnews.com/health/health-news/online-searches-gambling-addiction-surge-legalized-sports-betting-expa-rcna192462" target="_blank" rel="noopener noreferrer">NBC News</a></li>',
-    '<li><a href="https://www.npr.org/sections/shots-health-news/2025/02/18/nx-s1-5299943/as-sports-betting-has-soared-more-people-search-online-for-help-with-gambling-addiction" target="_blank" rel="noopener noreferrer">NPR</a></li>',
-    '</ul>',
-    '→ <a href="https://hivtrends.org" target="_blank" rel="noopener noreferrer">HIVTrends.org</a>—a collaboration of <a href="https://cfar.ucsd.edu" target="_blank" rel="noopener noreferrer">CFAR</a>, <a href="https://www.jhu.edu/" target="_blank" rel="noopener noreferrer">JHU</a>, <a href="https://qi.ucsd.edu" target="_blank" rel="noopener noreferrer">QI</a>, and <a href="https://actri.ucsd.edu" target="_blank" rel="noopener noreferrer">ACTRI</a>—was made possible through his key contributions."'
+    'A data scientist with expertise in analytics, decision science, machine learning, and LLMs.',
+    'Published researcher in JAMA Internal Medicine with work featured in NPR, CBS, NBC, and New York Post.',
   ],
-  // Changed from single resume to multiple resumes
   resumes: [
     {
       role: 'Data Scientist',
@@ -49,34 +35,184 @@ const about = {
   },
 }
 
-const projects = [
-  // projects can be added an removed
-  // if there are no projects, Projects section won't show up
-
+// Role definitions for interactive selection
+const roles = [
   {
-    name: 'End2End Text Summarizer',
-    description:
-      'Built a text summarizer for concise summaries, managing the entire workflow from configuration to deployment. Automated CI/CD with AWS and GitHub Actions, handling Docker, EC2, ECR, and runner setup.',
-    stack: ['Transformers, NLP, GitHub Actions'],
-    sourceCode: 'https://github.com/atharvayeola/text-summarizer',
-    livePreview: 'https://github.com/atharvayeola/text-summarizer',
+    id: 'analytics-engineer',
+    title: 'Analytics Engineer / Data Engineer',
+    resume: '/resume-data-engineer.pdf',
+    icon: '🔧',
+    description: 'Building robust data pipelines and scalable infrastructure',
   },
   {
-    name: 'Retail Vision Enhancement',
-    description:
-      'Implemented YOLOv8 for object detection, achieving over 90% accuracy in labeling on-shelf retail products. Utilized SuperGlue for precise product identification, ensuring accurate differentiation between similar items. Additionally, a Dockerfile was created to guarantee cross-platform reproducibility, simplifying deployment and setup.',
-    stack: ['yoloV8', 'SuperGlue', 'Docker'],
-    sourceCode: 'https://github.com/atharvayeola/retail-vision-enhancement',
-    livePreview: 'https://github.com/atharvayeola/retail-vision-enhancement/blob/main/results/bounding_box_detection.jpg',
+    id: 'data-scientist',
+    title: 'Data Scientist',
+    resume: '/resume-data-scientist.pdf',
+    icon: '🔬',
+    description: 'Creating ML models and driving insights from data',
   },
- 
+  {
+    id: 'aiml-engineer',
+    title: 'AI/ML Engineer',
+    resume: '/resume-ml-scientist.pdf',
+    icon: '🤖',
+    description: 'Deploying production ML systems and intelligent agents',
+  },
+  {
+    id: 'data-analyst',
+    title: 'Data / Product Analyst',
+    resume: '/resume-data-analyst.pdf',
+    icon: '📊',
+    description: 'Uncovering business insights through analytics and visualization',
+  },
 ]
+
+// All projects with comprehensive details
+const allProjects = [
+  {
+    id: 'medisyn-vision',
+    name: 'MediSynVision',
+    description: 'Medical imaging synthesis platform leveraging Stable Diffusion to generate synthetic medical imagery from natural language prompts. Features FastAPI backend with GPU acceleration and premium React frontend.',
+    stack: ['Python', 'FastAPI', 'Stable Diffusion', 'React', 'MPS/CUDA'],
+    sourceCode: 'https://github.com/atharvayeola/MediSynVision',
+    featured: true,
+  },
+  {
+    id: 'text2sql-agent',
+    name: 'Text2SQL Agent',
+    description: 'Production-ready SQL generation agent with dual LLM support (GPT-4 and local T5), enterprise security (SELECT-only), interactive schema visualization, and beautiful React UI powered by DuckDB.',
+    stack: ['Python', 'OpenAI', 'T5', 'DuckDB', 'React', 'FastAPI'],
+    sourceCode: 'https://github.com/atharvayeola/text2sql_agent',
+    featured: true,
+  },
+  {
+    id: 'model-eval-agent',
+    name: 'Model Evaluation Agent',
+    description: 'Modular evaluation framework with glassmorphic dashboard for orchestrating datasets, model adapters, and metrics. Features run history management and real-world dataset integration.',
+    stack: ['Python', 'React', 'SQLite', 'Vite'],
+    sourceCode: 'https://github.com/atharvayeola/model_eval_agent',
+  },
+  {
+    id: 'ecommerce-agent',
+    name: 'E-Commerce Agent',
+    description: 'Intelligent shopping agent using LangChain/LangGraph RAG pipeline with SentenceTransformer embeddings, image analysis via ViT, web enrichment, and Next.js chat interface.',
+    stack: ['Python', 'LangChain', 'LangGraph', 'ViT', 'Next.js', 'FastAPI'],
+    sourceCode: 'https://github.com/atharvayeola/e-commerce_agent',
+    featured: true,
+  },
+  {
+    id: 'network-analytics',
+    name: 'Network Analytics',
+    description: 'End-to-end analytics pipeline processing 12K+ synthetic network telemetry records. Features Plotly dashboards, latency statistics, reliability KPIs, and bottleneck detection.',
+    stack: ['Python', 'Pandas', 'Plotly', 'Statistical Analysis'],
+    sourceCode: 'https://github.com/atharvayeola/network-analytics',
+  },
+  {
+    id: 'fintrack',
+    name: 'FinTrack Real-Time Dashboard',
+    description: 'Real-time financial portfolio dashboard with WebSocket streaming, React + TypeScript frontend, Node.js backend, and AWS ECS Fargate deployment with auto-scaling.',
+    stack: ['React', 'TypeScript', 'Node.js', 'WebSocket', 'AWS ECS'],
+    sourceCode: 'https://github.com/atharvayeola/FinTrack',
+    featured: true,
+  },
+  {
+    id: 'text-summarizer',
+    name: 'Text Summarizer',
+    description: 'End-to-end abstractive summarization system with config-driven datasets, Optuna hyperparameter tuning, FastAPI async service, and complete AWS CI/CD pipeline with GitHub Actions.',
+    stack: ['Transformers', 'NLP', 'FastAPI', 'Optuna', 'AWS', 'GitHub Actions'],
+    sourceCode: 'https://github.com/atharvayeola/text-summarizer',
+  },
+  {
+    id: 'book-review-api',
+    name: 'Book Review API',
+    description: 'RESTful API for managing book reviews with comprehensive CRUD operations, built with modern backend best practices.',
+    stack: ['Python', 'FastAPI', 'REST API'],
+    sourceCode: 'https://github.com/atharvayeola/book-review-API',
+  },
+  {
+    id: 'smart-route-optimizer',
+    name: 'Smart Route Optimizer',
+    description: 'Advanced vehicle routing problem solver featuring distributed VRP with Dask clusters, K-Means clustering, ETA prediction via PyTorch MLP with ONNX export and INT8 quantization.',
+    stack: ['Python', 'Google OR-Tools', 'Dask', 'PyTorch', 'ONNX'],
+    sourceCode: 'https://github.com/atharvayeola/Smart-Route-Optimizer',
+  },
+  {
+    id: 'superstore-analytics',
+    name: 'Superstore Analytics Pipeline',
+    description: 'Medallion architecture data pipeline (Bronze/Silver/Gold) with star schema warehouse, feature engineering, and interactive Dash dashboard for business metrics.',
+    stack: ['Python', 'Pandas', 'SQLite', 'Dash', 'ETL'],
+    sourceCode: 'https://github.com/atharvayeola/superstore-analytics-pipeline',
+    featured: true,
+  },
+  {
+    id: 'ecommerce-funnel',
+    name: 'E-Commerce Funnel Analysis',
+    description: 'Large-scale clickstream analysis using PySpark to identify user drop-offs through the purchase funnel (view → cart → purchase) with Plotly visualizations.',
+    stack: ['PySpark', 'Plotly', 'Clickstream Analysis'],
+    sourceCode: 'https://github.com/atharvayeola/ecommerce-funnel-analysis',
+  },
+  {
+    id: 'social-media-insights',
+    name: 'Social Media Engagement Insights',
+    description: 'Analytics platform for measuring and optimizing social media engagement metrics across multiple platforms.',
+    stack: ['Python', 'Data Analytics', 'Visualization'],
+    sourceCode: 'https://github.com/atharvayeola/social-media_engagement-insights',
+  },
+  {
+    id: 'marketing-dashboard',
+    name: 'Marketing Campaign Dashboard',
+    description: 'Interactive Dash application analyzing marketing campaign performance, audience segmentation, channel effectiveness, and geographical insights.',
+    stack: ['Python', 'Dash', 'Plotly', 'Analytics'],
+    sourceCode: 'https://github.com/atharvayeola/marketing-campaign-dashboard',
+  },
+  {
+    id: 'retail-vision',
+    name: 'Retail Vision Enhancement',
+    description: 'Computer vision pipeline achieving 90%+ accuracy in retail product detection using YOLOv8, with SuperGlue for precise product identification and Docker for cross-platform deployment.',
+    stack: ['YOLOv8', 'SuperGlue', 'Computer Vision', 'Docker'],
+    sourceCode: 'https://github.com/atharvayeola/retail-vision-enhancement',
+  },
+]
+
+// Project mappings by role
+const projectsByRole = {
+  'analytics-engineer': [
+    'superstore-analytics',
+    'network-analytics',
+    'fintrack',
+    'text-summarizer',
+    'smart-route-optimizer',
+  ],
+  'data-scientist': [
+    'medisyn-vision',
+    'text-summarizer',
+    'model-eval-agent',
+    'text2sql-agent',
+    'network-analytics',
+    'smart-route-optimizer',
+  ],
+  'aiml-engineer': [
+    'text2sql-agent',
+    'ecommerce-agent',
+    'model-eval-agent',
+    'medisyn-vision',
+    'text-summarizer',
+    'retail-vision',
+  ],
+  'data-analyst': [
+    'ecommerce-funnel',
+    'marketing-dashboard',
+    'social-media-insights',
+    'superstore-analytics',
+    'fintrack',
+    'network-analytics',
+  ],
+}
 
 const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
   'Python', 'SQL', 'Spark', 'AWS', 'Docker', 'LLMs', 'PyTorch'
 ]
+
 const news = [
   {
     title: 'Original Investigation in JAMA Internal Medicine',
@@ -111,8 +247,7 @@ const news = [
     },
     date: 'December 11, 2024',
   },
-];
-
+]
 
 const blogposts = [
   {
@@ -120,21 +255,19 @@ const blogposts = [
     description: 'This blog covers advanced techniques to optimize neural networks, focusing on pruning and quantization. Learn how these methods can reduce model complexity and improve performance.',
     date: 'August 10, 2024',
     link: 'https://medium.com/@yeola-atharva/optimizing-neural-networks-pruning-and-quantization-techniques-ffd6e5b644e7',
-    type: 'latest', // Adding a type to differentiate between the latest and most popular blogs
+    type: 'latest',
   },
   {
     title: 'A Beginner\'s Guide to PyTorch: Building Your First Neural Network',
     description: 'An introductory guide for beginners to PyTorch. This blog walks you through building your first neural network, making it perfect for those new to deep learning.',
     date: 'July 25, 2024',
     link: 'https://medium.com/@yeola-atharva/a-beginners-guide-to-pytorch-building-your-first-neural-network-abf8e02511ed',
-    type: 'popular', // Adding a type to differentiate between the latest and most popular blogs
+    type: 'popular',
   },
 ]
 
-
 const contact = {
-  // email is optional - if left empty Contact section won't show up
   email: 'atharvayeola12@gmail.com',
 }
 
-export { header, about, projects, skills, news, blogposts, contact }
+export { header, about, roles, allProjects, projectsByRole, skills, news, blogposts, contact }
